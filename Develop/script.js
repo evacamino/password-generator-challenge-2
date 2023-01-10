@@ -7,16 +7,12 @@ var special = ["!", "?", "@", "#", "$", "%", "^", "&", "*", "(", ")", ".", "_", 
 var userChoice = []
 var results = ""
 
-
-
 function writePassword() {
     var password = generatePassword();
     var passwordText = document.querySelector("#password");
 
     passwordText.value = password;
 }
-
-
 
 function generatePassword() {
     var characters = [];
@@ -40,8 +36,6 @@ function generatePassword() {
     if (isNumbers === true) {
         characters = characters.concat(numbers);
     }
-
-
     console.log(isLowercase)
     var passwordLength = prompt("How long?")
     console.log(passwordLength);
@@ -51,20 +45,10 @@ function generatePassword() {
 
 
     for (var i = 0; i < passwordLength; i++){
-   
         var randomNumber = Math.floor(Math.random() * characters.length);
-   
         var randomCharacter = characters[randomNumber];
-       
-
-
         
         results = results + randomCharacter;
     }
-
-  
-
 }
-
-
 generateBtn.addEventListener("click", writePassword);
